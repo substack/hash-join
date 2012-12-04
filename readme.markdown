@@ -1,6 +1,6 @@
 # hash-join
 
-compute [https://en.wikipedia.org/wiki/Hash_join](hash-joins)
+compute [https://en.wikipedia.org/wiki/Hash\_join](hash-joins)
 on streaming document collections
 
 [![browser support](http://ci.testling.com/substack/hash-join.png)](http://ci.testling.com/substack/hash-join)
