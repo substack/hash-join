@@ -3,7 +3,7 @@
 compute [https://en.wikipedia.org/wiki/Hash_join](hash-joins)
 on streaming document collections
 
-[![browser support](http://ci.testling.com/substack/rolling-reduce.png)](http://ci.testling.com/substack/rolling-reduce)
+[![browser support](http://ci.testling.com/substack/hash-join.png)](http://ci.testling.com/substack/hash-join)
 
 [![build status](https://secure.travis-ci.org/substack/hash-join.png)](http://travis-ci.org/substack/hash-join)
 
