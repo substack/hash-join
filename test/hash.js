@@ -1,7 +1,7 @@
 var test = require('tape');
 var join = require('../');
 
-test('hash join', function (t) {
+test('function hash join', function (t) {
     t.plan(4);
     
     var r = join(
