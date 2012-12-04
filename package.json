@@ -1,0 +1,40 @@
+{
+    "name" : "hash-join",
+    "version" : "0.0.0",
+    "description" : "hash joins on streaming document collections",
+    "main" : "index.js",
+    "bin" : {},
+    "directories" : {
+        "example" : "example",
+        "test" : "test"
+    },
+    "dependencies" : {
+        "tape" : "~0.1.0"
+    },
+    "devDependencies" : {
+        "tap" : "~0.3.0"
+    },
+    "scripts" : {
+        "test" : "tap test/*.js"
+    },
+    "repository" : {
+        "type" : "git",
+        "url" : "git://github.com/substack/hash-join.git"
+    },
+    "homepage" : "https://github.com/substack/hash-join",
+    "keywords" : [
+        "hash",
+        "sql",
+        "nosql",
+        "relational",
+        "document",
+        "database",
+        "join"
+    ],
+    "author" : {
+        "name" : "James Halliday",
+        "email" : "mail@substack.net",
+        "url" : "http://substack.net"
+    },
+    "license" : "MIT"
+}

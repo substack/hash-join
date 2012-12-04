@@ -1,7 +1,7 @@
 # hash-join
 
 compute [https://en.wikipedia.org/wiki/Hash_join](hash-joins)
-on a document collections
+on streaming document collections
 
 # example
 
