@@ -3,8 +3,8 @@ var EventEmitter = require('events').EventEmitter;
 module.exports = Join;
 function Join (a, b) {
     if (!(this instanceof Join)) return new Join(a, b);
-    if (!Array.isArray(a)) a = [ a, 'id' ];
-    if (!Array.isArray(b)) b = [ b, 'id' ];
+    if (typeof a !== 'function' && !Array.isArray(a)) a = [ a, 'id' ];
+    if (typeof b !== 'function' && !Array.isArray(b)) b = [ b, 'id' ];
     
     EventEmitter.call(this);
     
@@ -49,19 +49,17 @@ Join.prototype.insert = function (doc) {
     var id;
     
     id = getHash(doc, self.a);
-    if (id !== undefined) {
-        save(id, 'a', doc);
-        return;
-    }
+    if (id) return save(id, 'a', doc);
     
     id = getHash(doc, self.b);
-    if (id !== undefined){
-        save(id, 'b', doc);
-        return;
-    }
+    if (id) return save(id, 'b', doc);
 };
 
 function getHash (doc, parts) {
+    if (typeof parts === 'function') {
+        return parts(doc);
+    }
+    
     if (doc.type !== parts[0]) return undefined;
     
     var node = doc;
