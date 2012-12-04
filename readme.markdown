@@ -3,6 +3,8 @@
 compute [https://en.wikipedia.org/wiki/Hash_join](hash-joins)
 on streaming document collections
 
+[![build status](https://secure.travis-ci.org/substack/hash-join.png)](http://travis-ci.org/substack/hash-join)
+
 # example
 
 ## hashing with functions
