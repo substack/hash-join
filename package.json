@@ -1,6 +1,6 @@
 {
     "name" : "hash-join",
-    "version" : "0.0.0",
+    "version" : "0.0.1",
     "description" : "hash joins on streaming document collections",
     "main" : "index.js",
     "bin" : {},
