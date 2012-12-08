@@ -21,7 +21,10 @@
         "files" : "test/*.js",
         "browsers" : [
             "ie6", "ie7", "ie8", "ie9",
-            "chrome/15", "firefox/13", "safari/5.1", "opera/11"
+            "chrome/15", "chrome/20",
+            "firefox/5", "firefox/10", "firefox/15",
+            "safari/5.1",
+            "opera/12"
         ]
     },
     "repository" : {
