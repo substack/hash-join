@@ -3,8 +3,8 @@ var EventEmitter = require('events').EventEmitter;
 module.exports = Join;
 function Join (a, b) {
     if (!(this instanceof Join)) return new Join(a, b);
-    if (typeof a !== 'function' && !Array.isArray(a)) a = [ a, 'id' ];
-    if (typeof b !== 'function' && !Array.isArray(b)) b = [ b, 'id' ];
+    if (typeof a !== 'function' && !isArray(a)) a = [ a, 'id' ];
+    if (typeof b !== 'function' && !isArray(b)) b = [ b, 'id' ];
     
     EventEmitter.call(this);
     
@@ -70,3 +70,7 @@ function getHash (doc, parts) {
     }
     return node;
 }
+
+var isArray = Array.isArray || function (xs) {
+    return Object.prototype.toString.call(xs) === '[object Array]';
+};
