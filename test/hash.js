@@ -43,6 +43,6 @@ test('function hash join', function (t) {
     r.insert({
         type : 'test',
         id : 'abc123',
-        commit : 'd8180b0778dd7a145b46f92b9a2d77db916debc5',
+        commit : 'd8180b0778dd7a145b46f92b9a2d77db916debc5'
     });
 });
