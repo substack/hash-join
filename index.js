@@ -35,12 +35,12 @@ Join.prototype.insert = function (doc) {
         hash[id][key].push(doc);
         
         if (key === 'a') {
-            hash[id].b.forEach(function (b) {
+            forEach(hash[id].b, function (b) {
                 self.emit('pair', doc, b);
             });
         }
         else {
-            hash[id].a.forEach(function (a) {
+            forEach(hash[id].a, function (a) {
                 self.emit('pair', a, doc);
             });
         }
@@ -74,3 +74,10 @@ function getHash (doc, parts) {
 var isArray = Array.isArray || function (xs) {
     return Object.prototype.toString.call(xs) === '[object Array]';
 };
+
+function forEach (xs, f) {
+    if (xs.forEach) return xs.forEach(f);
+    for (var i = 0; i < xs.length; i++) {
+        f(xs[i], i);
+    }
+}
